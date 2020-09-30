@@ -18,7 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableSwagger2
-@ComponentScan(basePackageClasses = {BookstoreApplication.class })
+
 public class BookstoreApplication {
 
 	public static void main(String[] args) {
@@ -26,31 +26,31 @@ public class BookstoreApplication {
 	}
 // Swagger Configuration / 
 	
-@Bean
-  public Docket SwaggerCongiguration()
-	  {
-		//here we need to create instance of docket to user swagger2 documentation
-		
-	return new Docket(DocumentationType.SWAGGER_2)
-				.select()
-			.paths(PathSelectors.any())
-			.apis(RequestHandlerSelectors.basePackage("com.capgemini.bookstore"))
-			.build()
-			.apiInfo(apiDetails());
-	  
-        }
-	private ApiInfo apiDetails()
-	{
-		return new ApiInfo(
-		"Book Information System ",
-		"Api for Book Info System of Book Management System",
-		"1.0",
-		"Api end points for crud operation",
-		new springfox.documentation.service.Contact("Sourav bhuyan","souravbhuyan2@gmail.com","www.google.com"),
-		"Capgemini BootCamp Training",
-		"using swagger for documentation",
-		Collections.emptyList());
-	}
+//@Bean
+//  public Docket SwaggerCongiguration()
+//	  {
+//		//here we need to create instance of docket to user swagger2 documentation
+//		
+//	return new Docket(DocumentationType.SWAGGER_2)
+//				.select()
+//			.paths(PathSelectors.any())
+//			.apis(RequestHandlerSelectors.basePackage("com.capgemini.bookstore"))
+//			.build()
+//			.apiInfo(apiDetails());
+//	  
+//        }
+//	private ApiInfo apiDetails()
+//	{
+//		return new ApiInfo(
+//		"Book Information System ",
+//		"Api for Book Info System of Book Management System",
+//		"1.0",
+//		"Api end points for crud operation",
+//		new springfox.documentation.service.Contact("Tushar Debnath","tusharsoa@gmail.com","www.google.com"),
+//		"Capgemini BootCamp Training",
+//		"using swagger for documentation",
+//		Collections.emptyList());
+//	}
 
 
 }

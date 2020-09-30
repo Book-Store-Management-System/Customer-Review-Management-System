@@ -11,8 +11,12 @@ public interface ReviewService {
 	
 	public Review viewReview(Integer reviewId);
 	
-	public String updateReview(Integer reviewId, String headline,String comment);
+	
 
 	public void deleteReview(Integer reviewId);
+
+	
+
+	public Review updateReview(Review reviews);
 
 }

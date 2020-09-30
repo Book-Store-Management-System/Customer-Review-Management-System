@@ -34,19 +34,15 @@ public class ReviewServiceImpl implements ReviewService{
         return null;
 	}
 
+	
 	@Override
-	public String updateReview(Integer reviewId, String headline, String comment) {
-		Optional<Review> optional = reviewRepository.findById(reviewId);
-
-		if (optional.isPresent()) {
-			Review rev = optional.get();
-			rev.setHeadline(headline);
-			rev.setComment(comment);
-			return "Headline and comment updated successfully";
+	public Review updateReview(Review reviews) {
+		if (reviewRepository.existsById(reviews.getReviewId())) {
+			
+			return reviewRepository.save(reviews);
 		}
-		return "Missing Details";
+		return reviews;
 	}
-
 	@Override
 	public void deleteReview(Integer reviewId) {
 		if(reviewRepository.findById(reviewId).isPresent()){

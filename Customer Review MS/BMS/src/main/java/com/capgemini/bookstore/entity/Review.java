@@ -25,7 +25,7 @@ public class Review {
 	
 	//@ManyToOne
 	//@JoinColumn(name = "firstName")
-	@OneToOne
+	//@OneToOne
 	
 	//private Customer customer;
 	private int rating;

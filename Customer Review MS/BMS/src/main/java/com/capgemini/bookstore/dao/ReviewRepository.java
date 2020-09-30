@@ -8,6 +8,8 @@ import com.capgemini.bookstore.entity.Review;
 
 @Repository
 public interface ReviewRepository extends JpaRepository<Review, Integer>{
+
+	
 	
 	
 }
